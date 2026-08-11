@@ -5,9 +5,9 @@
   <img src="../assets/indextts_icon_light.png" width="300"/>
 </picture>
 
-**工业级可控、高效的零样本文本转语音系统**
+**Un sistema de texto a voz zero-shot, controlable y eficiente, de nivel industrial**
 
-简体中文 | [English](../README.md) | [日本語](README_ja.md) | [Español](README_es.md) | [العربية](README_ar.md)
+[简体中文](README_zh.md) | [English](../README.md) | [日本語](README_ja.md) | Español | [العربية](README_ar.md)
 
 [![GitHub Stars](https://img.shields.io/github/stars/index-tts/index-tts?style=flat&logo=github)](https://github.com/index-tts/index-tts/stargazers)
 [![arXiv](https://img.shields.io/badge/arXiv-2601.03888-b31b1b?logo=arxiv)](https://arxiv.org/abs/2601.03888)
@@ -15,78 +15,84 @@
 
 </div>
 
-IndexTTS 是一个零样本文本转语音（TTS）系统，只需一段参考音频即可克隆音色。
-最新发布的 **IndexTTS-2.5** 支持中文、英文、日语、西班牙语和阿拉伯语，
-具备细粒度情感控制、语速控制、发音控制（拼音 / CMU 音素 / 日语假名）能力，
-推理速度较 IndexTTS-2 更快。
+IndexTTS es un sistema de texto a voz zero-shot que clona una voz a partir de un
+único clip de audio de referencia. La última versión, **IndexTTS-2.5**, admite
+chino, inglés, japonés, español y árabe, con control de emociones de grano
+fino, control de la velocidad de habla, control de la pronunciación (Pinyin /
+fonemas CMU / Kana japonés) y una inferencia más rápida que IndexTTS-2.
 
 ---
 
-## 🗂️ 模型列表
+## 🗂️ Catálogo de modelos
 
-| 模型 | 演示 | 论文 | ModelScope | HuggingFace |
+| Modelo | Demos | Artículo | ModelScope | HuggingFace |
 | :--- | :---: | :---: | :---: | :---: |
 | **IndexTTS-2.5** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/index-tts2-5.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2601.03888) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-2.5) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-2.5) |
 | **IndexTTS-2** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/index-tts2.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2506.21619) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-2) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-2) |
 | **IndexTTS-1.5** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2502.05512) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-1.5) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-1.5) |
 | **IndexTTS** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2502.05512) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/Index-TTS) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/Index-TTS) |
 
-## 📣 更新日志
+## 📣 Novedades
 
-- `2026/08/10` 🔥 **IndexTTS-2.5** 全球发布！
-  - 模型现已支持中文、英文、日语、西班牙语和阿拉伯语，推理速度较 IndexTTS-2 更快，同时保持跨语言合成与音色-情感解耦能力。
-  - 模型提升了中文拼音、英文 CMU 音素和日语假名的可控性。
-  - 支持通过 `duration_factor` 控制语速（0.5–2.0 倍时长）。
-  - 支持通过 [vLLM](https://github.com/vllm-project/recipes/pull/772) 进行生产环境部署。
-- `2025/09/08` 🔥 **IndexTTS-2** 全球发布！
-  - 首个支持精确合成时长控制的自回归 TTS 模型，支持可控与非可控模式。<i>本版本暂未开放该功能。</i>
-  - 模型实现高度情感表达的语音合成，支持多模态情感控制。
-- `2025/05/14` 🔥 **IndexTTS-1.5** 发布，显著提升模型稳定性及英文表现。
-- `2025/03/25` 🔥 **IndexTTS-1.0** 发布，开放模型权重与推理代码。
-- `2025/02/12` 🎉 论文提交 arXiv，发布演示与测试集。
+- `2026/08/10` 🔥 Lanzamos **IndexTTS-2.5**
+  - Ahora admite chino, inglés, japonés, español y árabe, con una inferencia más rápida que IndexTTS-2, manteniendo las capacidades de síntesis multilingüe y de desacoplamiento timbre-emoción.
+  - Mayor controlabilidad del Pinyin chino, los fonemas CMU en inglés y el Kana japonés.
+  - Control de la velocidad de habla mediante `duration_factor` (0.5x–2.0x de duración).
+- `2025/09/08` 🔥 Lanzamos **IndexTTS-2**
+  - El primer modelo TTS autorregresivo con control preciso de la duración de la síntesis, compatible con los modos controlable y no controlable. <i>Esta funcionalidad aún no está habilitada en esta versión.</i>
+  - Síntesis de voz con emociones altamente expresivas, con control de emociones a través de múltiples modalidades de entrada.
+- `2025/05/14` 🔥 Lanzamos **IndexTTS-1.5**, que mejora significativamente la estabilidad del modelo y su rendimiento en inglés.
+- `2025/03/25` 🔥 Lanzamos **IndexTTS-1.0** con los pesos del modelo y el código de inferencia.
+- `2025/02/12` 🎉 Enviamos nuestro artículo a arXiv y publicamos nuestras demos y conjuntos de prueba.
 
-## 🎬 演示视频
+## 🎬 Demos
 
 <div align="center">
 
-**IndexTTS-2.5：语音未来，现已生成**
+**IndexTTS-2.5: El futuro de la voz, generándose ahora**
 
 [![IndexTTS2.5 Demo](../assets/index2.5_video_cover.png)](https://www.bilibili.com/video/BV1uvMk6ZEdK/)
 
-**IndexTTS-2：语音未来，现已生成**
+**IndexTTS-2: El futuro de la voz, generándose ahora**
 
 [![IndexTTS2 Demo](../assets/IndexTTS2-video-pic.png)](https://www.bilibili.com/video/BV136a9zqEk5)
 
 </div>
 
-## 🚀 快速开始
+## 🚀 Primeros pasos
 
-### 1. 环境准备
+### 1. Requisitos previos
 
-请确保已安装 [git](https://git-scm.com/downloads)，然后下载本仓库：
+Asegúrate de tener [git](https://git-scm.com/downloads) instalado y luego descarga
+este repositorio:
 
 ```bash
 git clone https://github.com/index-tts/index-tts.git && cd index-tts
 ```
 
-示例音频会在首次运行时按需从 HuggingFace/ModelScope 自动下载，无需 Git LFS。
+Los archivos de audio de ejemplo se descargan bajo demanda desde
+HuggingFace/ModelScope en la primera ejecución, por lo que Git LFS ya no es
+necesario.
 
-### 2. 安装依赖
+### 2. Instalar dependencias
 
-我们使用 [uv](https://docs.astral.sh/uv/getting-started/installation/) 管理项目依赖环境，
-这是保证安装可靠的**必需**工具：
+Usamos [uv](https://docs.astral.sh/uv/getting-started/installation/) para
+gestionar el entorno de dependencias del proyecto. Es **obligatorio** para una
+instalación fiable:
 
 ```bash
-pip install -U uv  # 其他安装方式见上方官网链接
+pip install -U uv  # or see the link above for other install methods
 ```
 
 ```bash
 uv sync --all-extras
 ```
 
-该命令会*自动*创建 `.venv` 虚拟环境，并安装正确版本的 Python 及所有依赖。
+Esto crea automáticamente un directorio de proyecto `.venv` e instala las
+versiones correctas de Python y de todas las dependencias necesarias.
 
-如下载缓慢，可选用国内镜像：
+Si la descarga es lenta, usa un espejo local, por ejemplo uno de estos espejos
+en China:
 
 ```bash
 uv sync --all-extras --default-index "https://mirrors.aliyun.com/pypi/simple"
@@ -95,24 +101,29 @@ uv sync --all-extras --default-index "https://mirrors.tuna.tsinghua.edu.cn/pypi/
 ```
 
 > [!TIP]
-> **可选功能：**
+> **Funciones adicionales disponibles:**
 >
-> - `--all-extras`：自动安装下方列出的全部可选功能。可去除此选项自定义安装。
-> - `--extra webui`：安装 WebUI 支持（推荐）。
-> - `--extra deepspeed`：安装 DeepSpeed 加速（部分环境可加速推理）。
+> - `--all-extras`: Añade automáticamente *todas* las funciones adicionales
+>   enumeradas a continuación. Puedes quitar este indicador si quieres
+>   personalizar tu instalación.
+> - `--extra webui`: Añade compatibilidad con la WebUI (recomendado).
+> - `--extra deepspeed`: Añade compatibilidad con DeepSpeed (puede acelerar la
+>   inferencia en algunos sistemas).
 
 > [!IMPORTANT]
-> **Windows 注意：** DeepSpeed 在部分 Windows 环境较难安装，可去除 `--all-extras`，
-> 手动添加所需的其他功能选项。
+> **Windows:** DeepSpeed puede ser difícil de instalar. Puedes omitirlo
+> quitando el indicador `--all-extras` y añadiendo manualmente los demás
+> indicadores de funciones.
 >
-> **Linux/Windows 注意：** 如遇 CUDA 相关报错，请确保已安装 NVIDIA
-> [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) **12.8** 及以上版本。
+> **Linux/Windows:** Si ves un error de CUDA durante la instalación, asegúrate
+> de que el [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) de NVIDIA
+> versión **12.8** (o superior) esté instalado en tu sistema.
 
-### 3. 下载模型
+### 3. Descargar los modelos
 
-通过 [uv tool](https://docs.astral.sh/uv/guides/tools/#installing-tools) 下载所需模型：
+Descarga los modelos necesarios mediante [uv tool](https://docs.astral.sh/uv/guides/tools/#installing-tools):
 
-HuggingFace 下载：
+Mediante `huggingface-cli`:
 
 ```bash
 uv tool install "huggingface-hub[cli,hf_xet]"
@@ -124,7 +135,7 @@ hf download IndexTeam/IndexTTS-2.5 --local-dir=checkpoints
 hf download IndexTeam/IndexTTS-2 --local-dir=checkpoints_2
 ```
 
-ModelScope 下载：
+O mediante `modelscope`:
 
 ```bash
 uv tool install "modelscope"
@@ -137,61 +148,71 @@ modelscope download --model IndexTeam/IndexTTS-2 --local_dir checkpoints_2
 ```
 
 > [!IMPORTANT]
-> 如上述命令无法运行，请仔细阅读 `uv tool` 输出信息，按提示将工具添加到系统 PATH。
+> Si los comandos anteriores no están disponibles, lee atentamente la salida de
+> `uv tool`: te indicará cómo añadir las herramientas al PATH de tu sistema.
 
 > [!NOTE]
-> 项目首次运行还会自动下载部分小模型。如网络访问 HuggingFace 较慢，建议提前设置镜像：
+> Algunos modelos pequeños se descargan automáticamente en la primera
+> ejecución. Si tu red accede lentamente a HuggingFace, configura un espejo
+> antes de ejecutar el código:
 >
 > ```bash
 > export HF_ENDPOINT="https://hf-mirror.com"
 > ```
 
-### 4. 检测 GPU 加速
+### 4. Comprobar la aceleración por GPU
 
-如需诊断环境、查看识别到的 GPU，可运行内置工具：
+Para diagnosticar tu entorno y ver qué GPU se detectan, usa la utilidad
+incluida:
 
 ```bash
 uv run tools/gpu_check.py
 ```
 
-## 💻 使用说明
+## 💻 Uso
 
-### 🌐 Web 演示
+### 🌐 Demo web
 
 ```bash
-# IndexTTS-2.5（默认）
+# IndexTTS-2.5 (default)
 uv run webui.py --version 2.5 --model_dir ./checkpoints
 
 # IndexTTS-2
 uv run webui.py --version 2 --model_dir ./checkpoints_2
 ```
 
-浏览器访问 `http://127.0.0.1:7860` 查看演示。
+Abre tu navegador y visita `http://127.0.0.1:7860` para ver la demo.
 
-可通过命令行参数开启 BF16（IndexTTS-2.5）/ FP16（IndexTTS-2）推理（降低显存占用）、
-DeepSpeed 加速、CUDA 内核编译加速等。运行以下命令查看所有可用选项：
+Puedes ajustar la configuración para habilitar la inferencia en BF16
+(IndexTTS-2.5) / FP16 (IndexTTS-2) (menor uso de VRAM), la aceleración con
+DeepSpeed, núcleos CUDA compilados para mayor velocidad, etc. Todas las
+opciones disponibles se pueden ver con:
 
 ```bash
 uv run webui.py -h
 ```
 
 > [!IMPORTANT]
-> 使用 **FP16/BF16**（半精度）推理非常有益：推理更快、显存占用更低，质量损失极小。
+> La inferencia en **FP16/BF16** (media precisión) es más rápida y usa menos
+> VRAM, con una pérdida de calidad muy pequeña.
 >
-> **DeepSpeed** *可能*在部分系统上加速推理，但也可能变慢，效果取决于具体硬件、驱动及操作系统，
-> 建议分别开启和关闭测试，找到最适合自己环境的配置。
+> **DeepSpeed** *puede* acelerar la inferencia en algunos sistemas, pero
+> también podría hacerla más lenta: depende de tu hardware, controladores y
+> sistema operativo. Pruébalo de ambas formas.
 >
-> 注意：所有 `uv` 命令会**自动激活**对应项目的虚拟环境。请*不要*手动激活环境后再运行
-> `uv` 命令，否则可能导致依赖冲突！
+> Todos los comandos `uv` **activan automáticamente** el entorno virtual
+> correcto del proyecto. *No* actives manualmente ningún entorno antes de
+> ejecutar comandos `uv`, ya que eso puede causar conflictos de dependencias.
 
-### 🚀 使用 vLLM 部署
+### 🚀 Servicio con vLLM
 
-生产环境部署请参考 [IndexTTS 的 vLLM 部署方案](https://github.com/vllm-project/recipes/pull/772)。
+Para el despliegue en producción, consulta la [receta de vLLM para IndexTTS](https://github.com/vllm-project/recipes/pull/772).
 
-### 📝 Python 脚本调用
+### 📝 API de Python
 
-运行脚本时请使用 `uv run <file.py>`，保证程序在 uv 创建的虚拟环境下运行。
-部分情况可能需要将当前目录加入 `PYTHONPATH`：
+Para ejecutar scripts, usa `uv run <file.py>` de modo que el código se ejecute
+dentro del entorno de `uv`. Es posible que también necesites añadir el
+directorio actual a `PYTHONPATH`:
 
 ```bash
 # IndexTTS2
@@ -205,7 +226,7 @@ PYTHONPATH="$PYTHONPATH:." uv run indextts/infer_v2_5.py \
   --lang EN
 ```
 
-#### 0. 初始化 IndexTTS
+#### 0. Inicializar IndexTTS
 
 ```python
 # IndexTTS2
@@ -217,7 +238,7 @@ from indextts.infer_v2_5 import IndexTTS2
 tts = IndexTTS2(cfg_path="checkpoints/config.yaml", model_dir="checkpoints", use_bf16=True)
 ```
 
-#### 1. 单一参考音频音色克隆
+#### 1. Clonación de voz con un único audio de referencia
 
 ```python
 text = "Translate for me, what is a surprise!"
@@ -225,11 +246,11 @@ text = "Translate for me, what is a surprise!"
 # IndexTTS2
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, output_path="gen.wav", verbose=True)
 
-# IndexTTS2.5（多语言，需指定语言）
+# IndexTTS2.5 (multilingual, with language selection)
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, lang="EN", output_path="gen.wav", verbose=True)
 ```
 
-#### 2. 使用独立的情感参考音频控制情感
+#### 2. Control de emociones con un audio de referencia emocional independiente
 
 ```python
 text = "酒楼丧尽天良，开始借机竞拍房间，哎，一群蠢货。"
@@ -241,10 +262,11 @@ tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, lang="ZH", output_path="gen.wav", emo_audio_prompt="examples/emo_sad.wav", verbose=True)
 ```
 
-#### 3. 通过 `emo_alpha` 调节情感强度
+#### 3. Ajustar la intensidad de la emoción con `emo_alpha`
 
-指定情感参考音频时，可通过 `emo_alpha` 调节情感对输出的影响强度。
-有效范围 `0.0 - 1.0`，默认值为 `1.0`（100%）。
+Cuando se especifica un audio de referencia emocional, `emo_alpha` ajusta
+cuánto afecta al resultado. Rango válido: `0.0 - 1.0`, valor por defecto:
+`1.0` (100%).
 
 ```python
 text = "酒楼丧尽天良，开始借机竞拍房间，哎，一群蠢货。"
@@ -256,14 +278,17 @@ tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, output_path="gen.wav", lang="ZH", emo_audio_prompt="examples/emo_sad.wav", emo_alpha=0.9, verbose=True)
 ```
 
-#### 4. 使用情感向量控制情感
+#### 4. Control de emociones con un vector de emociones
 
-也可以不使用情感参考音频，直接提供 8 维情感向量，按以下顺序指定各情感强度：
-`[高兴, 愤怒, 悲伤, 害怕, 厌恶, 忧郁, 惊讶, 平静]`。
-可使用 `use_random` 参数开启推理随机性（默认 `False`，设为 `True` 开启随机采样）。
+Puedes omitir el audio de referencia emocional y, en su lugar, proporcionar una
+lista de 8 valores flotantes que especifican la intensidad de cada emoción, en
+el orden
+`[alegre, enfadado, triste, asustado, disgustado, melancólico, sorprendido, tranquilo]`.
+Usa `use_random` para introducir estocasticidad durante la inferencia
+(valor por defecto: `False`).
 
 > [!NOTE]
-> 开启随机采样会降低音色克隆的还原度。
+> Activar el muestreo aleatorio reduce la fidelidad de la clonación de voz.
 
 ```python
 text = "对不起嘛！我的记性真的不太好，但是和你在一起的事情，我都会努力记住的~"
@@ -275,11 +300,12 @@ tts.infer(spk_audio_prompt='examples/09.wav', text=text, output_path="gen.wav", 
 tts.infer(spk_audio_prompt='examples/09.wav', text=text, lang="ZH", output_path="gen.wav", emo_vector=[0, 0, 0.8, 0, 0, 0, 0, 0], use_random=False, verbose=True)
 ```
 
-#### 5. 根据文本自动生成情感（`use_emo_text`）
+#### 5. Control de emociones a partir del propio texto (`use_emo_text`)
 
-开启 `use_emo_text` 后，输入文本会自动转换为情感向量。
-建议将 `emo_alpha` 设为 0.6 左右（或更低），以获得更自然的语音效果。
-可使用 `use_random` 开启随机性（默认 `False`）。
+Activa `use_emo_text` para convertir automáticamente tu guion `text` en
+vectores de emociones. Se recomienda un `emo_alpha` en torno a 0.6 (o menor)
+para una voz más natural. Se puede introducir aleatoriedad con `use_random`
+(valor por defecto: `False`).
 
 ```python
 text = "快躲起来！是他要来了！他要来抓我们了！"
@@ -291,10 +317,11 @@ tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, lang="ZH", output_path="gen.wav", emo_alpha=0.6, use_emo_text=True, use_random=False, verbose=True)
 ```
 
-#### 6. 使用显式情感描述文本（`emo_text`）
+#### 6. Control de emociones con una descripción explícita de la emoción (`emo_text`)
 
-通过 `emo_text` 参数直接提供情感描述文本，情感文本会自动转换为情感向量，
-从而实现文本内容与情感描述的分别控制：
+Proporciona una descripción textual específica de la emoción mediante
+`emo_text`, que se convierte en vectores de emociones, lo que te permite
+controlar por separado el guion del texto y la descripción de la emoción:
 
 ```python
 text = "快躲起来！是他要来了！他要来抓我们了！"
@@ -307,29 +334,32 @@ tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, lang="ZH", output_path="gen.wav", emo_alpha=0.6, use_emo_text=True, emo_text=emo_text, use_random=False, verbose=True)
 ```
 
-#### 7. 语速控制（`duration_factor`）
+#### 7. Control de la velocidad de habla (`duration_factor`)
 
-取值大于 `1.0` 时语速变慢，小于 `1.0` 时语速变快。默认值为 `1.0`（正常语速）。
-有效范围 `0.5 - 2.0`。
+Un valor mayor que `1.0` ralentiza el habla; un valor menor que `1.0` la
+acelera. Valor por defecto: `1.0` (velocidad normal). Rango válido:
+`0.5 - 2.0`.
 
 ```python
 text = "大家好，欢迎来到IndexTTS的语速控制演示。"
 
 # IndexTTS2.5
-# 放慢（1.2 倍时长）
+# Slow down (1.2x duration)
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, lang="ZH", output_path="gen_slow.wav", duration_factor=1.2, verbose=True)
 
-# 加快（0.8 倍时长）
+# Speed up (0.8x duration)
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, lang="ZH", output_path="gen_fast.wav", duration_factor=0.8, verbose=True)
 ```
 
-### 🗣️ 发音控制
+### 🗣️ Control de la pronunciación
 
-**IndexTTS2.5 —— 拼音 / CMU 音素 / 日语假名：**
+**IndexTTS2.5 — Pinyin / fonemas CMU / Kana japonés:**
 
-IndexTTS2.5 支持以下字符替换写法，具有更好的指令跟随能力。
-完整合法拼音列表请参考 `checkpoints/pinyin.vocab`；英文音素请参考
-[CMU 词典](https://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b)。
+IndexTTS2.5 admite estas sustituciones de caracteres con una mejor capacidad
+de seguimiento de instrucciones. Para ver la lista completa de entradas
+válidas, consulta `checkpoints/pinyin.vocab` para el Pinyin y el
+[diccionario CMU](https://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b)
+para los fonemas en inglés.
 
 ```
 他在银<行|XING2>里<行|HANG2>走了半天，发现这笔业务办不<行|HANG2>。
@@ -339,19 +369,22 @@ He had a <minute|M IH1 . N AH0 T> to examine the <minute|M AY0 . N UW1 T> detail
 彼は料理が<上手|じょうず>だが、囲碁では<上手|うわて>に負けた。
 ```
 
-**IndexTTS2 —— 拼音：**
+**IndexTTS2 — Pinyin:**
 
-IndexTTS2 支持中文字符与拼音混合建模。如需精确的发音控制，请输入包含特定拼音标注的
-文本来触发拼音控制功能。需要注意：拼音控制并非对所有声母韵母组合都生效，系统仅支持
-中文合法拼音，具体可参考 `checkpoints/pinyin.vocab` 文件。
+IndexTTS2 admite el modelado mixto de caracteres chinos y Pinyin. Para activar
+el control por Pinyin, proporciona texto con anotaciones específicas de Pinyin.
+Ten en cuenta que el control por Pinyin no funciona para todas las
+combinaciones posibles de consonante y vocal; solo se admiten los casos de
+Pinyin chino válidos (consulta `checkpoints/pinyin.vocab`).
 
 ```
 之前你做DE5很好，所以这一次也DEI3做DE2很好才XING2，如果这次目标完成得不错的话，我们就直接打DI1去银行取钱。
 ```
 
-### 🕰️ IndexTTS-1.5（旧版）
+### 🕰️ IndexTTS-1.5 (heredado)
 
-如需使用旧的 IndexTTS1 模型，可以 import 旧模块：
+También puedes usar el modelo anterior IndexTTS1 importando un módulo
+diferente:
 
 ```python
 from indextts.infer import IndexTTS
@@ -361,24 +394,24 @@ text = "大家好，我现在正在bilibili 体验 ai 科技，说实话，来�
 tts.infer(voice, text, 'gen.wav')
 ```
 
-详细信息见 [README_INDEXTTS_1_5](../archive/README_INDEXTTS_1_5.md)，
-或访问 IndexTTS1 仓库 [index-tts:v1.5.0](https://github.com/index-tts/index-tts/tree/v1.5.0)。
+Para más detalles, consulta [README_INDEXTTS_1_5](../archive/README_INDEXTTS_1_5.md),
+o visita el repositorio de IndexTTS1 en [index-tts:v1.5.0](https://github.com/index-tts/index-tts/tree/v1.5.0).
 
-## 📊 评测结果
+## 📊 Evaluación
 
-**表 1：基于 CV3-Eval 测试集的零样本 TTS 评测结果**（阿拉伯语使用内部测试集）。†为原始论文引用结果。
+**Tabla 1: TTS zero-shot en CV3-Eval** (el árabe usa un conjunto de prueba interno). †Citado del artículo original.
 
 <table>
 <thead>
 <tr>
-<th rowspan="2">模型</th>
-<th rowspan="2">参数量</th>
+<th rowspan="2">Modelo</th>
+<th rowspan="2">Parámetros</th>
 <th colspan="2">zh</th>
 <th colspan="2">en</th>
 <th colspan="2">es</th>
 <th colspan="2">ja</th>
 <th colspan="2">ar</th>
-<th colspan="2">平均</th>
+<th colspan="2">Prom.</th>
 </tr>
 <tr>
 <th>WER↓</th><th>SS↑</th>
@@ -403,18 +436,18 @@ tts.infer(voice, text, 'gen.wav')
 </tbody>
 </table>
 
-**表 2：基于 CV3-Eval 测试集的跨语言 TTS 评测**（中文提示 → 目标语言，阿拉伯语使用内部测试集）。
+**Tabla 2: TTS multilingüe en CV3-Eval** (prompt en chino → idioma de destino; el árabe usa un conjunto de prueba interno).
 
 <table>
 <thead>
 <tr>
-<th rowspan="2">模型</th>
-<th rowspan="2">参数量</th>
+<th rowspan="2">Modelo</th>
+<th rowspan="2">Parámetros</th>
 <th colspan="2">zh→en</th>
 <th colspan="2">zh→es</th>
 <th colspan="2">zh→ja</th>
 <th colspan="2">zh→ar</th>
-<th colspan="2">平均</th>
+<th colspan="2">Prom.</th>
 </tr>
 <tr>
 <th>WER↓</th><th>SS↑</th>
@@ -438,25 +471,25 @@ tts.infer(voice, text, 'gen.wav')
 </tbody>
 </table>
 
-## 🤝 社区与联系方式
+## 🤝 Comunidad y contacto
 
-- **QQ 群：** 663272642（4 群）、1013410623（5 群）
-- **Discord：** https://discord.gg/uT32E7KDmy
-- **邮箱：** indexspeech@bilibili.com
+- **Grupos de QQ:** 663272642 (n.º 4), 1013410623 (n.º 5)
+- **Discord:** https://discord.gg/uT32E7KDmy
+- **Correo electrónico:** indexspeech@bilibili.com
 
-欢迎加入我们的社区！🌏 欢迎大家交流讨论！
+¡Te invitamos a unirte a nuestra comunidad! 🌏 欢迎大家来交流讨论！
 
 > [!CAUTION]
-> 感谢大家对 bilibili IndexTTS 项目的支持与关注！
-> 请注意，目前由核心团队直接维护的**官方渠道仅有**: [https://github.com/index-tts/index-tts](https://github.com/index-tts/index-tts)。
-> ***其他任何网站或服务均非官方提供***，我们对其内容及安全性、准确性和及时性不作任何担保。
-> 为了保障您的权益，建议通过上述官方渠道获取 bilibili IndexTTS 项目的最新进展与更新。
+> ¡Gracias por tu apoyo al proyecto IndexTTS de bilibili!
+> Ten en cuenta que el **único canal oficial** mantenido por el equipo central es: [https://github.com/index-tts/index-tts](https://github.com/index-tts/index-tts).
+> ***Cualquier otro sitio web o servicio no es oficial*** y no podemos garantizar su seguridad, exactitud ni actualidad.
+> Para conocer las últimas novedades, consulta siempre este repositorio oficial.
 
-商业合作请联系 <u>indexspeech@bilibili.com</u>。
+Para uso comercial y colaboraciones, contacta con <u>indexspeech@bilibili.com</u>.
 
-## 📚 论文引用
+## 📚 Citación
 
-🌟 如果本项目对您有帮助，请为我们点 star 并引用论文。
+🌟 Si nuestro trabajo te resulta útil, déjanos una estrella y cita nuestros artículos.
 
 IndexTTS2.5:
 
@@ -496,7 +529,7 @@ IndexTTS:
 }
 ```
 
-## 🙏 致谢
+## 🙏 Agradecimientos
 
 1. [tortoise-tts](https://github.com/neonbjb/tortoise-tts)
 2. [XTTSv2](https://github.com/coqui-ai/TTS)
@@ -506,7 +539,7 @@ IndexTTS:
 6. [maskgct](https://github.com/open-mmlab/Amphion/tree/main/models/tts/maskgct)
 7. [seed-vc](https://github.com/Plachtaa/seed-vc)
 
-## 📄 许可证
+## 📄 Licencia
 
-本项目基于 [bilibili 模型使用许可协议](../LICENSE) 发布。
-使用前请同时阅读[免责声明](../DISCLAIMER)。
+Este proyecto se publica bajo el [Acuerdo de Licencia de Uso de Modelos de bilibili](../LICENSE).
+Lee también el [DESCARGO DE RESPONSABILIDAD](../DISCLAIMER) antes de usarlo.

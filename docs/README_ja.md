@@ -5,9 +5,9 @@
   <img src="../assets/indextts_icon_light.png" width="300"/>
 </picture>
 
-**工业级可控、高效的零样本文本转语音系统**
+**産業レベルの制御可能で効率的なゼロショット・テキスト読み上げシステム**
 
-简体中文 | [English](../README.md) | [日本語](README_ja.md) | [Español](README_es.md) | [العربية](README_ar.md)
+[简体中文](README_zh.md) | [English](../README.md) | 日本語 | [Español](README_es.md) | [العربية](README_ar.md)
 
 [![GitHub Stars](https://img.shields.io/github/stars/index-tts/index-tts?style=flat&logo=github)](https://github.com/index-tts/index-tts/stargazers)
 [![arXiv](https://img.shields.io/badge/arXiv-2601.03888-b31b1b?logo=arxiv)](https://arxiv.org/abs/2601.03888)
@@ -15,78 +15,81 @@
 
 </div>
 
-IndexTTS 是一个零样本文本转语音（TTS）系统，只需一段参考音频即可克隆音色。
-最新发布的 **IndexTTS-2.5** 支持中文、英文、日语、西班牙语和阿拉伯语，
-具备细粒度情感控制、语速控制、发音控制（拼音 / CMU 音素 / 日语假名）能力，
-推理速度较 IndexTTS-2 更快。
+IndexTTS は、1つの参照音声クリップから声をクローンするゼロショット・テキスト
+読み上げシステムです。最新リリースの **IndexTTS-2.5** は、中国語、英語、日本語、
+スペイン語、アラビア語をサポートし、きめ細かな感情コントロール、話速コントロール、
+発音コントロール（ピンイン / CMU 音素 / 日本語の仮名）を備え、IndexTTS-2 よりも
+高速な推論を実現しています。
 
 ---
 
-## 🗂️ 模型列表
+## 🗂️ モデル一覧
 
-| 模型 | 演示 | 论文 | ModelScope | HuggingFace |
+| モデル | デモ | 論文 | ModelScope | HuggingFace |
 | :--- | :---: | :---: | :---: | :---: |
 | **IndexTTS-2.5** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/index-tts2-5.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2601.03888) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-2.5) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-2.5) |
 | **IndexTTS-2** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/index-tts2.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2506.21619) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-2) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-2) |
 | **IndexTTS-1.5** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2502.05512) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-1.5) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-1.5) |
 | **IndexTTS** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2502.05512) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/Index-TTS) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/Index-TTS) |
 
-## 📣 更新日志
+## 📣 ニュース
 
-- `2026/08/10` 🔥 **IndexTTS-2.5** 全球发布！
-  - 模型现已支持中文、英文、日语、西班牙语和阿拉伯语，推理速度较 IndexTTS-2 更快，同时保持跨语言合成与音色-情感解耦能力。
-  - 模型提升了中文拼音、英文 CMU 音素和日语假名的可控性。
-  - 支持通过 `duration_factor` 控制语速（0.5–2.0 倍时长）。
-  - 支持通过 [vLLM](https://github.com/vllm-project/recipes/pull/772) 进行生产环境部署。
-- `2025/09/08` 🔥 **IndexTTS-2** 全球发布！
-  - 首个支持精确合成时长控制的自回归 TTS 模型，支持可控与非可控模式。<i>本版本暂未开放该功能。</i>
-  - 模型实现高度情感表达的语音合成，支持多模态情感控制。
-- `2025/05/14` 🔥 **IndexTTS-1.5** 发布，显著提升模型稳定性及英文表现。
-- `2025/03/25` 🔥 **IndexTTS-1.0** 发布，开放模型权重与推理代码。
-- `2025/02/12` 🎉 论文提交 arXiv，发布演示与测试集。
+- `2026/08/10` 🔥 **IndexTTS-2.5** をリリースしました
+  - 中国語、英語、日本語、スペイン語、アラビア語をサポートし、IndexTTS-2 よりも高速な推論を実現しながら、言語横断的および音色・感情分離の能力を維持しています。
+  - 中国語ピンイン、英語 CMU 音素、日本語仮名の制御性が向上しました。
+  - `duration_factor` による話速コントロール（0.5倍～2.0倍の長さ）。
+- `2025/09/08` 🔥 **IndexTTS-2** をリリースしました
+  - 精密な合成時間制御を備えた初の自己回帰型 TTS モデルで、制御可能モードと非制御モードの両方をサポートします。<i>この機能は本リリースではまだ有効になっていません。</i>
+  - 高い表現力を持つ感情音声合成。複数の入力モダリティによる感情コントロールが可能です。
+- `2025/05/14` 🔥 **IndexTTS-1.5** をリリースしました。モデルの安定性と英語での性能が大幅に向上しています。
+- `2025/03/25` 🔥 **IndexTTS-1.0** をモデルウェイトおよび推論コードとともにリリースしました。
+- `2025/02/12` 🎉 論文を arXiv に投稿し、デモとテストセットを公開しました。
 
-## 🎬 演示视频
+## 🎬 デモ
 
 <div align="center">
 
-**IndexTTS-2.5：语音未来，现已生成**
+**IndexTTS-2.5: The Future of Voice, Now Generating**
 
 [![IndexTTS2.5 Demo](../assets/index2.5_video_cover.png)](https://www.bilibili.com/video/BV1uvMk6ZEdK/)
 
-**IndexTTS-2：语音未来，现已生成**
+**IndexTTS-2: The Future of Voice, Now Generating**
 
 [![IndexTTS2 Demo](../assets/IndexTTS2-video-pic.png)](https://www.bilibili.com/video/BV136a9zqEk5)
 
 </div>
 
-## 🚀 快速开始
+## 🚀 はじめに
 
-### 1. 环境准备
+### 1. 前提条件
 
-请确保已安装 [git](https://git-scm.com/downloads)，然后下载本仓库：
+[git](https://git-scm.com/downloads) がインストールされていることを確認してから、
+このリポジトリをダウンロードしてください：
 
 ```bash
 git clone https://github.com/index-tts/index-tts.git && cd index-tts
 ```
 
-示例音频会在首次运行时按需从 HuggingFace/ModelScope 自动下载，无需 Git LFS。
+サンプル音声ファイルは初回実行時に HuggingFace/ModelScope からオンデマンドで
+ダウンロードされるため、Git LFS は不要になりました。
 
-### 2. 安装依赖
+### 2. 依存関係のインストール
 
-我们使用 [uv](https://docs.astral.sh/uv/getting-started/installation/) 管理项目依赖环境，
-这是保证安装可靠的**必需**工具：
+プロジェクトの依存環境の管理には [uv](https://docs.astral.sh/uv/getting-started/installation/) を使用しています。確実なインストールのために **必須** です：
 
 ```bash
-pip install -U uv  # 其他安装方式见上方官网链接
+pip install -U uv  # or see the link above for other install methods
 ```
 
 ```bash
 uv sync --all-extras
 ```
 
-该命令会*自动*创建 `.venv` 虚拟环境，并安装正确版本的 Python 及所有依赖。
+これにより `.venv` プロジェクトディレクトリが自動的に作成され、正しいバージョンの
+Python と必要なすべての依存関係がインストールされます。
 
-如下载缓慢，可选用国内镜像：
+ダウンロードが遅い場合はローカルミラーを使用してください。例えば中国国内の
+以下のミラーが利用できます：
 
 ```bash
 uv sync --all-extras --default-index "https://mirrors.aliyun.com/pypi/simple"
@@ -95,24 +98,27 @@ uv sync --all-extras --default-index "https://mirrors.tuna.tsinghua.edu.cn/pypi/
 ```
 
 > [!TIP]
-> **可选功能：**
+> **利用可能な追加機能：**
 >
-> - `--all-extras`：自动安装下方列出的全部可选功能。可去除此选项自定义安装。
-> - `--extra webui`：安装 WebUI 支持（推荐）。
-> - `--extra deepspeed`：安装 DeepSpeed 加速（部分环境可加速推理）。
+> - `--all-extras`: 以下に挙げる *すべての* 追加機能を自動的に追加します。
+>   インストール内容をカスタマイズしたい場合は、このフラグを外してください。
+> - `--extra webui`: WebUI サポートを追加します（推奨）。
+> - `--extra deepspeed`: DeepSpeed サポートを追加します（一部のシステムで推論が
+>   高速化する場合があります）。
 
 > [!IMPORTANT]
-> **Windows 注意：** DeepSpeed 在部分 Windows 环境较难安装，可去除 `--all-extras`，
-> 手动添加所需的其他功能选项。
+> **Windows:** DeepSpeed のインストールが難しい場合があります。`--all-extras`
+> フラグを外し、他の機能フラグを個別に追加することでスキップできます。
 >
-> **Linux/Windows 注意：** 如遇 CUDA 相关报错，请确保已安装 NVIDIA
-> [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) **12.8** 及以上版本。
+> **Linux/Windows:** インストール中に CUDA エラーが表示された場合は、NVIDIA の
+> [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) バージョン **12.8**
+> （以降）がシステムにインストールされていることを確認してください。
 
-### 3. 下载模型
+### 3. モデルのダウンロード
 
-通过 [uv tool](https://docs.astral.sh/uv/guides/tools/#installing-tools) 下载所需模型：
+[uv tool](https://docs.astral.sh/uv/guides/tools/#installing-tools) を使って必要なモデルをダウンロードします：
 
-HuggingFace 下载：
+`huggingface-cli` を使う場合：
 
 ```bash
 uv tool install "huggingface-hub[cli,hf_xet]"
@@ -124,7 +130,7 @@ hf download IndexTeam/IndexTTS-2.5 --local-dir=checkpoints
 hf download IndexTeam/IndexTTS-2 --local-dir=checkpoints_2
 ```
 
-ModelScope 下载：
+または `modelscope` を使う場合：
 
 ```bash
 uv tool install "modelscope"
@@ -137,61 +143,69 @@ modelscope download --model IndexTeam/IndexTTS-2 --local_dir checkpoints_2
 ```
 
 > [!IMPORTANT]
-> 如上述命令无法运行，请仔细阅读 `uv tool` 输出信息，按提示将工具添加到系统 PATH。
+> 上記のコマンドが利用できない場合は、`uv tool` の出力をよく確認してください。
+> ツールをシステムの PATH に追加する方法が表示されます。
 
 > [!NOTE]
-> 项目首次运行还会自动下载部分小模型。如网络访问 HuggingFace 较慢，建议提前设置镜像：
+> 一部の小さなモデルは初回実行時に自動的にダウンロードされます。ネットワークから
+> HuggingFace へのアクセスが遅い場合は、コードを実行する前にミラーを設定してください：
 >
 > ```bash
 > export HF_ENDPOINT="https://hf-mirror.com"
 > ```
 
-### 4. 检测 GPU 加速
+### 4. GPU アクセラレーションの確認
 
-如需诊断环境、查看识别到的 GPU，可运行内置工具：
+環境を診断し、どの GPU が検出されているかを確認するには、付属のユーティリティを
+使用してください：
 
 ```bash
 uv run tools/gpu_check.py
 ```
 
-## 💻 使用说明
+## 💻 使い方
 
-### 🌐 Web 演示
+### 🌐 Web デモ
 
 ```bash
-# IndexTTS-2.5（默认）
+# IndexTTS-2.5 (default)
 uv run webui.py --version 2.5 --model_dir ./checkpoints
 
 # IndexTTS-2
 uv run webui.py --version 2 --model_dir ./checkpoints_2
 ```
 
-浏览器访问 `http://127.0.0.1:7860` 查看演示。
+ブラウザを開いて `http://127.0.0.1:7860` にアクセスするとデモが表示されます。
 
-可通过命令行参数开启 BF16（IndexTTS-2.5）/ FP16（IndexTTS-2）推理（降低显存占用）、
-DeepSpeed 加速、CUDA 内核编译加速等。运行以下命令查看所有可用选项：
+設定を調整して、BF16（IndexTTS-2.5）/ FP16（IndexTTS-2）推論（VRAM 使用量の削減）、
+DeepSpeed アクセラレーション、高速化のためのコンパイル済み CUDA カーネルなどを
+有効にできます。利用可能なすべてのオプションは以下で確認できます：
 
 ```bash
 uv run webui.py -h
 ```
 
 > [!IMPORTANT]
-> 使用 **FP16/BF16**（半精度）推理非常有益：推理更快、显存占用更低，质量损失极小。
+> **FP16/BF16**（半精度）推論は高速で VRAM 使用量も少なく、品質の低下は
+> ごくわずかです。
 >
-> **DeepSpeed** *可能*在部分系统上加速推理，但也可能变慢，效果取决于具体硬件、驱动及操作系统，
-> 建议分别开启和关闭测试，找到最适合自己环境的配置。
+> **DeepSpeed** は一部のシステムで推論を高速化する*可能性*がありますが、逆に
+> 遅くなる場合もあります。ハードウェア、ドライバ、OS に依存します。両方を
+> 試してみてください。
 >
-> 注意：所有 `uv` 命令会**自动激活**对应项目的虚拟环境。请*不要*手动激活环境后再运行
-> `uv` 命令，否则可能导致依赖冲突！
+> すべての `uv` コマンドは、プロジェクトごとの正しい仮想環境を**自動的に
+> アクティベート**します。`uv` コマンドを実行する前に手動で環境をアクティベート
+> *しないでください*。依存関係の競合を引き起こす可能性があります。
 
-### 🚀 使用 vLLM 部署
+### 🚀 vLLM によるサービング
 
-生产环境部署请参考 [IndexTTS 的 vLLM 部署方案](https://github.com/vllm-project/recipes/pull/772)。
+本番環境へのデプロイについては、[IndexTTS 向け vLLM レシピ](https://github.com/vllm-project/recipes/pull/772)を参照してください。
 
-### 📝 Python 脚本调用
+### 📝 Python API
 
-运行脚本时请使用 `uv run <file.py>`，保证程序在 uv 创建的虚拟环境下运行。
-部分情况可能需要将当前目录加入 `PYTHONPATH`：
+スクリプトを実行するには `uv run <file.py>` を使用し、コードが `uv` 環境内で
+実行されるようにしてください。カレントディレクトリを `PYTHONPATH` に追加する
+必要がある場合もあります：
 
 ```bash
 # IndexTTS2
@@ -205,7 +219,7 @@ PYTHONPATH="$PYTHONPATH:." uv run indextts/infer_v2_5.py \
   --lang EN
 ```
 
-#### 0. 初始化 IndexTTS
+#### 0. IndexTTS の初期化
 
 ```python
 # IndexTTS2
@@ -217,7 +231,7 @@ from indextts.infer_v2_5 import IndexTTS2
 tts = IndexTTS2(cfg_path="checkpoints/config.yaml", model_dir="checkpoints", use_bf16=True)
 ```
 
-#### 1. 单一参考音频音色克隆
+#### 1. 1つの参照音声によるボイスクローニング
 
 ```python
 text = "Translate for me, what is a surprise!"
@@ -225,11 +239,11 @@ text = "Translate for me, what is a surprise!"
 # IndexTTS2
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, output_path="gen.wav", verbose=True)
 
-# IndexTTS2.5（多语言，需指定语言）
+# IndexTTS2.5 (multilingual, with language selection)
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, lang="EN", output_path="gen.wav", verbose=True)
 ```
 
-#### 2. 使用独立的情感参考音频控制情感
+#### 2. 別の感情参照音声による感情コントロール
 
 ```python
 text = "酒楼丧尽天良，开始借机竞拍房间，哎，一群蠢货。"
@@ -241,10 +255,10 @@ tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, lang="ZH", output_path="gen.wav", emo_audio_prompt="examples/emo_sad.wav", verbose=True)
 ```
 
-#### 3. 通过 `emo_alpha` 调节情感强度
+#### 3. `emo_alpha` による感情強度の調整
 
-指定情感参考音频时，可通过 `emo_alpha` 调节情感对输出的影响强度。
-有效范围 `0.0 - 1.0`，默认值为 `1.0`（100%）。
+感情参照音声が指定されている場合、`emo_alpha` でそれが出力に与える影響の
+大きさを調整できます。有効範囲：`0.0 - 1.0`、デフォルト：`1.0`（100%）。
 
 ```python
 text = "酒楼丧尽天良，开始借机竞拍房间，哎，一群蠢货。"
@@ -256,14 +270,15 @@ tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_07.wav', text=text, output_path="gen.wav", lang="ZH", emo_audio_prompt="examples/emo_sad.wav", emo_alpha=0.9, verbose=True)
 ```
 
-#### 4. 使用情感向量控制情感
+#### 4. 感情ベクトルによる感情コントロール
 
-也可以不使用情感参考音频，直接提供 8 维情感向量，按以下顺序指定各情感强度：
-`[高兴, 愤怒, 悲伤, 害怕, 厌恶, 忧郁, 惊讶, 平静]`。
-可使用 `use_random` 参数开启推理随机性（默认 `False`，设为 `True` 开启随机采样）。
+感情参照音声を省略し、代わりに各感情の強度を指定する 8 要素の浮動小数点数リストを
+指定できます。順序は
+`[happy, angry, sad, afraid, disgusted, melancholic, surprised, calm]`
+です。`use_random` を使うと推論時に確率的な揺らぎを導入できます（デフォルト：`False`）。
 
 > [!NOTE]
-> 开启随机采样会降低音色克隆的还原度。
+> ランダムサンプリングを有効にすると、ボイスクローニングの忠実度が低下します。
 
 ```python
 text = "对不起嘛！我的记性真的不太好，但是和你在一起的事情，我都会努力记住的~"
@@ -275,11 +290,12 @@ tts.infer(spk_audio_prompt='examples/09.wav', text=text, output_path="gen.wav", 
 tts.infer(spk_audio_prompt='examples/09.wav', text=text, lang="ZH", output_path="gen.wav", emo_vector=[0, 0, 0.8, 0, 0, 0, 0, 0], use_random=False, verbose=True)
 ```
 
-#### 5. 根据文本自动生成情感（`use_emo_text`）
+#### 5. テキスト自体からの感情コントロール（`use_emo_text`）
 
-开启 `use_emo_text` 后，输入文本会自动转换为情感向量。
-建议将 `emo_alpha` 设为 0.6 左右（或更低），以获得更自然的语音效果。
-可使用 `use_random` 开启随机性（默认 `False`）。
+`use_emo_text` を有効にすると、`text` のスクリプトが自動的に感情ベクトルに
+変換されます。より自然な音声にするためには、`emo_alpha` を 0.6 前後（または
+それ以下）にすることを推奨します。`use_random` でランダム性を導入できます
+（デフォルト：`False`）。
 
 ```python
 text = "快躲起来！是他要来了！他要来抓我们了！"
@@ -291,10 +307,10 @@ tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, lang="ZH", output_path="gen.wav", emo_alpha=0.6, use_emo_text=True, use_random=False, verbose=True)
 ```
 
-#### 6. 使用显式情感描述文本（`emo_text`）
+#### 6. 明示的な感情記述による感情コントロール（`emo_text`）
 
-通过 `emo_text` 参数直接提供情感描述文本，情感文本会自动转换为情感向量，
-从而实现文本内容与情感描述的分别控制：
+`emo_text` で特定の感情記述テキストを指定すると、それが感情ベクトルに変換
+されます。これにより、テキストスクリプトと感情記述を別々にコントロールできます：
 
 ```python
 text = "快躲起来！是他要来了！他要来抓我们了！"
@@ -307,29 +323,29 @@ tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, output_path="gen.
 tts.infer(spk_audio_prompt='examples/voice_12.wav', text=text, lang="ZH", output_path="gen.wav", emo_alpha=0.6, use_emo_text=True, emo_text=emo_text, use_random=False, verbose=True)
 ```
 
-#### 7. 语速控制（`duration_factor`）
+#### 7. 話速コントロール（`duration_factor`）
 
-取值大于 `1.0` 时语速变慢，小于 `1.0` 时语速变快。默认值为 `1.0`（正常语速）。
-有效范围 `0.5 - 2.0`。
+`1.0` より大きい値を指定すると音声が遅くなり、`1.0` より小さい値を指定すると
+速くなります。デフォルト：`1.0`（通常速度）。有効範囲：`0.5 - 2.0`。
 
 ```python
 text = "大家好，欢迎来到IndexTTS的语速控制演示。"
 
 # IndexTTS2.5
-# 放慢（1.2 倍时长）
+# Slow down (1.2x duration)
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, lang="ZH", output_path="gen_slow.wav", duration_factor=1.2, verbose=True)
 
-# 加快（0.8 倍时长）
+# Speed up (0.8x duration)
 tts.infer(spk_audio_prompt='examples/voice_01.wav', text=text, lang="ZH", output_path="gen_fast.wav", duration_factor=0.8, verbose=True)
 ```
 
-### 🗣️ 发音控制
+### 🗣️ 発音コントロール
 
-**IndexTTS2.5 —— 拼音 / CMU 音素 / 日语假名：**
+**IndexTTS2.5 — ピンイン / CMU 音素 / 日本語仮名：**
 
-IndexTTS2.5 支持以下字符替换写法，具有更好的指令跟随能力。
-完整合法拼音列表请参考 `checkpoints/pinyin.vocab`；英文音素请参考
-[CMU 词典](https://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b)。
+IndexTTS2.5 は、より優れた指示追従能力により、これらの文字置換をサポートします。
+有効なエントリの完全なリストについては、ピンインは `checkpoints/pinyin.vocab`、
+英語音素は [CMU 辞書](https://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b)を参照してください。
 
 ```
 他在银<行|XING2>里<行|HANG2>走了半天，发现这笔业务办不<行|HANG2>。
@@ -339,19 +355,22 @@ He had a <minute|M IH1 . N AH0 T> to examine the <minute|M AY0 . N UW1 T> detail
 彼は料理が<上手|じょうず>だが、囲碁では<上手|うわて>に負けた。
 ```
 
-**IndexTTS2 —— 拼音：**
+**IndexTTS2 — ピンイン：**
 
-IndexTTS2 支持中文字符与拼音混合建模。如需精确的发音控制，请输入包含特定拼音标注的
-文本来触发拼音控制功能。需要注意：拼音控制并非对所有声母韵母组合都生效，系统仅支持
-中文合法拼音，具体可参考 `checkpoints/pinyin.vocab` 文件。
+IndexTTS2 は、漢字とピンインの混合モデリングをサポートします。ピンイン
+コントロールを有効にするには、特定のピンイン注釈を付けたテキストを入力します。
+なお、ピンインコントロールはすべての子音・母音の組み合わせで機能するわけでは
+ありません。有効な中国語ピンインの場合のみサポートされます
+（`checkpoints/pinyin.vocab` を参照）。
 
 ```
 之前你做DE5很好，所以这一次也DEI3做DE2很好才XING2，如果这次目标完成得不错的话，我们就直接打DI1去银行取钱。
 ```
 
-### 🕰️ IndexTTS-1.5（旧版）
+### 🕰️ IndexTTS-1.5（レガシー）
 
-如需使用旧的 IndexTTS1 模型，可以 import 旧模块：
+別のモジュールをインポートすることで、以前の IndexTTS1 モデルを使用することも
+できます：
 
 ```python
 from indextts.infer import IndexTTS
@@ -361,24 +380,24 @@ text = "大家好，我现在正在bilibili 体验 ai 科技，说实话，来�
 tts.infer(voice, text, 'gen.wav')
 ```
 
-详细信息见 [README_INDEXTTS_1_5](../archive/README_INDEXTTS_1_5.md)，
-或访问 IndexTTS1 仓库 [index-tts:v1.5.0](https://github.com/index-tts/index-tts/tree/v1.5.0)。
+詳細については [README_INDEXTTS_1_5](../archive/README_INDEXTTS_1_5.md) を参照するか、
+[index-tts:v1.5.0](https://github.com/index-tts/index-tts/tree/v1.5.0) の IndexTTS1 リポジトリをご覧ください。
 
-## 📊 评测结果
+## 📊 評価
 
-**表 1：基于 CV3-Eval 测试集的零样本 TTS 评测结果**（阿拉伯语使用内部测试集）。†为原始论文引用结果。
+**表 1: CV3-Eval におけるゼロショット TTS**（アラビア語は社内テストセットを使用）。†原論文より引用。
 
 <table>
 <thead>
 <tr>
-<th rowspan="2">模型</th>
-<th rowspan="2">参数量</th>
+<th rowspan="2">Model</th>
+<th rowspan="2">Params</th>
 <th colspan="2">zh</th>
 <th colspan="2">en</th>
 <th colspan="2">es</th>
 <th colspan="2">ja</th>
 <th colspan="2">ar</th>
-<th colspan="2">平均</th>
+<th colspan="2">Avg</th>
 </tr>
 <tr>
 <th>WER↓</th><th>SS↑</th>
@@ -403,18 +422,18 @@ tts.infer(voice, text, 'gen.wav')
 </tbody>
 </table>
 
-**表 2：基于 CV3-Eval 测试集的跨语言 TTS 评测**（中文提示 → 目标语言，阿拉伯语使用内部测试集）。
+**表 2: CV3-Eval における言語横断 TTS**（中国語プロンプト → ターゲット言語。アラビア語は社内テストセットを使用）。
 
 <table>
 <thead>
 <tr>
-<th rowspan="2">模型</th>
-<th rowspan="2">参数量</th>
+<th rowspan="2">Model</th>
+<th rowspan="2">Params</th>
 <th colspan="2">zh→en</th>
 <th colspan="2">zh→es</th>
 <th colspan="2">zh→ja</th>
 <th colspan="2">zh→ar</th>
-<th colspan="2">平均</th>
+<th colspan="2">Avg</th>
 </tr>
 <tr>
 <th>WER↓</th><th>SS↑</th>
@@ -438,25 +457,25 @@ tts.infer(voice, text, 'gen.wav')
 </tbody>
 </table>
 
-## 🤝 社区与联系方式
+## 🤝 コミュニティ & お問い合わせ
 
-- **QQ 群：** 663272642（4 群）、1013410623（5 群）
-- **Discord：** https://discord.gg/uT32E7KDmy
-- **邮箱：** indexspeech@bilibili.com
+- **QQ グループ:** 663272642 (No.4), 1013410623 (No.5)
+- **Discord:** https://discord.gg/uT32E7KDmy
+- **メール:** indexspeech@bilibili.com
 
-欢迎加入我们的社区！🌏 欢迎大家交流讨论！
+ぜひコミュニティにご参加ください！🌏 皆様のご参加・ご意見をお待ちしております！
 
 > [!CAUTION]
-> 感谢大家对 bilibili IndexTTS 项目的支持与关注！
-> 请注意，目前由核心团队直接维护的**官方渠道仅有**: [https://github.com/index-tts/index-tts](https://github.com/index-tts/index-tts)。
-> ***其他任何网站或服务均非官方提供***，我们对其内容及安全性、准确性和及时性不作任何担保。
-> 为了保障您的权益，建议通过上述官方渠道获取 bilibili IndexTTS 项目的最新进展与更新。
+> bilibili IndexTTS プロジェクトをご支援いただきありがとうございます！
+> コアチームがメンテナンスしている**唯一の公式チャンネル**は [https://github.com/index-tts/index-tts](https://github.com/index-tts/index-tts) です。
+> ***その他のウェブサイトやサービスは公式ではありません***。その安全性、正確性、適時性について当方は保証できません。
+> 最新情報については、常にこの公式リポジトリをご参照ください。
 
-商业合作请联系 <u>indexspeech@bilibili.com</u>。
+商用利用および協業については、<u>indexspeech@bilibili.com</u> までお問い合わせください。
 
-## 📚 论文引用
+## 📚 引用
 
-🌟 如果本项目对您有帮助，请为我们点 star 并引用论文。
+🌟 私たちの成果がお役に立ちましたら、スターを付け、論文を引用していただけると幸いです。
 
 IndexTTS2.5:
 
@@ -496,7 +515,7 @@ IndexTTS:
 }
 ```
 
-## 🙏 致谢
+## 🙏 謝辞
 
 1. [tortoise-tts](https://github.com/neonbjb/tortoise-tts)
 2. [XTTSv2](https://github.com/coqui-ai/TTS)
@@ -506,7 +525,7 @@ IndexTTS:
 6. [maskgct](https://github.com/open-mmlab/Amphion/tree/main/models/tts/maskgct)
 7. [seed-vc](https://github.com/Plachtaa/seed-vc)
 
-## 📄 许可证
+## 📄 ライセンス
 
-本项目基于 [bilibili 模型使用许可协议](../LICENSE) 发布。
-使用前请同时阅读[免责声明](../DISCLAIMER)。
+このプロジェクトは [bilibili モデル使用許諾契約](../LICENSE) の下で公開されています。
+ご使用前に [DISCLAIMER](../DISCLAIMER) もお読みください。
