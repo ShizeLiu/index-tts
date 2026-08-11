@@ -160,7 +160,7 @@ uv run tools/gpu_check.py
 
 ```bash
 # IndexTTS-2.5（默认）
-uv run webui.py --version 2.5 --model_dir ./checkpoints
+uv run webui.py
 
 # IndexTTS-2
 uv run webui.py --version 2 --model_dir ./checkpoints_2
@@ -437,6 +437,19 @@ tts.infer(voice, text, 'gen.wav')
 <tr><td><b>IndexTTS2.5-RL</b></td><td>0.8B</td><td>3.55</td><td>67.47</td><td>4.86</td><td>64.47</td><td>6.38</td><td>75.82</td><td>9.89</td><td>73.05</td><td>6.17</td><td>70.20</td></tr>
 </tbody>
 </table>
+
+## ⚡ 推理速度
+
+RTF（墙钟时间 / 生成音频时长，越低越快），NVIDIA RTX 4090，`kv_cache=True`。
+
+| 文本 | 2.0 fp16 | 2.0 fp32 | 2.5 bf16 | 2.5 fp32 |
+|---|---|---|---|---|
+| 7 字 | 0.4004 | 0.3748 | 0.2871 | 0.2547 |
+| 16 字 | 0.3322 | 0.3389 | 0.2155 | 0.1981 |
+| 28 字 | 0.3257 | 0.3480 | 0.2065 | 0.1927 |
+| 80 字 | 0.3229 | 0.3754 | 0.1997 | 0.2060 |
+| 200 字 | 0.3244 | 0.3990 | 0.1997 | 0.2144 |
+| **overall** | **0.3257** | **0.3748** | **0.2065** | **0.2060** |
 
 ## 🤝 社区与联系方式
 
