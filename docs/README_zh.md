@@ -26,7 +26,7 @@ IndexTTS 是一个零样本文本转语音（TTS）系统，只需一段参考�
 
 | 模型 | 演示 | 论文 | ModelScope | HuggingFace |
 | :--- | :---: | :---: | :---: | :---: |
-| **IndexTTS-2.5** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/index-tts2-5.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2601.03888) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-2.5) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-2.5) |
+| **IndexTTS-2.5** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/index-tts2-5.github.io/) [![Studio](https://img.shields.io/badge/Studio-ModelScope-purple?logo=modelscope)](https://modelscope.cn/studios/IndexTeam/IndexTTS-2.5) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2601.03888) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-2.5) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-2.5) |
 | **IndexTTS-2** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/index-tts2.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2506.21619) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-2) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-2) |
 | **IndexTTS-1.5** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2502.05512) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/IndexTTS-1.5) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/IndexTTS-1.5) |
 | **IndexTTS** | [![Demo](https://img.shields.io/badge/Demo-Page-orange?logo=github)](https://index-tts.github.io/) | [![Paper](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv)](https://arxiv.org/abs/2502.05512) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-purple?logo=modelscope)](https://modelscope.cn/models/IndexTeam/Index-TTS) | [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-blue?logo=huggingface)](https://huggingface.co/IndexTeam/Index-TTS) |
@@ -37,7 +37,7 @@ IndexTTS 是一个零样本文本转语音（TTS）系统，只需一段参考�
   - 模型现已支持中文、英文、日语、西班牙语和阿拉伯语，推理速度较 IndexTTS-2 更快，同时保持跨语言合成与音色-情感解耦能力。
   - 模型提升了中文拼音、英文 CMU 音素和日语假名的可控性。
   - 支持通过 `duration_factor` 控制语速（0.5–2.0 倍时长）。
-  - 支持通过 [vLLM](https://github.com/vllm-project/recipes/pull/772) 进行生产环境部署。
+  - 支持通过 [vLLM](https://recipes.vllm.ai/IndexTeam/IndexTTS-2.5) 进行生产环境部署。
 - `2025/09/08` 🔥 **IndexTTS-2** 全球发布！
   - 首个支持精确合成时长控制的自回归 TTS 模型，支持可控与非可控模式。<i>本版本暂未开放该功能。</i>
   - 模型实现高度情感表达的语音合成，支持多模态情感控制。
@@ -186,7 +186,7 @@ uv run webui.py -h
 
 ### 🚀 使用 vLLM 部署
 
-生产环境部署请参考 [IndexTTS 的 vLLM 部署方案](https://github.com/vllm-project/recipes/pull/772)。
+生产环境部署请参考 [IndexTTS 的 vLLM 部署方案](https://recipes.vllm.ai/IndexTeam/IndexTTS-2.5)。
 
 ### 📝 Python 脚本调用
 
